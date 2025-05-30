@@ -21,8 +21,8 @@ const PaymentForm = () => {
     try {
       setLoading(true);
       const [servicesRes, paymentsRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/services'),
-        axios.get('http://localhost:5000/api/payments')
+        axios.get('https://octopus-wash-api.onrender.com/api/services'),
+        axios.get('https://octopus-wash-api.onrender.com/api/payments')
       ]);
       setServices(servicesRes.data);
       setPayments(paymentsRes.data);
@@ -50,14 +50,14 @@ const PaymentForm = () => {
       setLoading(true);
       if (editingPaymentId) {
         // Update existing payment
-        await axios.put(`http://localhost:5000/api/payments/${editingPaymentId}`, {
+        await axios.put(`https://octopus-wash-api.onrender.com/api/payments/${editingPaymentId}`, {
           RecordNumber: formData.RecordNumber,
           AmountPaid: parseFloat(formData.AmountPaid)
         });
         setSuccess('Payment updated successfully!');
       } else {
         // Create new payment
-        await axios.post('http://localhost:5000/api/payments', {
+        await axios.post('https://octopus-wash-api.onrender.com/api/payments', {
           RecordNumber: formData.RecordNumber,
           AmountPaid: parseFloat(formData.AmountPaid)
         });

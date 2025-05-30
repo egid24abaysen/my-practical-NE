@@ -130,7 +130,7 @@ function Login({ onLogin }) {
         
         {/* Spotify-like footer */}
         <div className="mt-8 text-center">
-          <p className="text-gray-500 text-sm">© 2025 Aba-Art-App. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">© {new Date().getFullYear()} Aba-Art-App. All rights reserved.</p>
         </div>
       </div>
     </div>

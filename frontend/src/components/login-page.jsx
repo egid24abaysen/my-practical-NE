@@ -45,8 +45,8 @@ function Login({ onLogin }) {
         <div className="bg-gray-800 bg-opacity-50 backdrop-blur-lg rounded-xl shadow-2xl overflow-hidden border border-gray-700 border-opacity-50">
           {/* Spotify-like header */}
           <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 text-center">
-            <h2 className="text-3xl font-bold text-white">Welcome To Cwsms</h2>
-            <p className="text-green-100 mt-1">Log in to continue</p>
+            <h2 className="text-3xl font-bold text-white">Welcome to system</h2>
+            <p className="text-green-100 mt-1">Sign-In</p>
           </div>
           
           <div className="p-8">
@@ -61,7 +61,7 @@ function Login({ onLogin }) {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
-                  placeholder="Your username"
+                  placeholder="Enter username"
                   className="w-full px-4 py-3 bg-gray-700 bg-opacity-70 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 border border-gray-600 transition-all duration-200 placeholder-gray-400"
                 />
               </div>
@@ -76,7 +76,7 @@ function Login({ onLogin }) {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  placeholder="Your password"
+                  placeholder="Enter password"
                   className="w-full px-4 py-3 bg-gray-700 bg-opacity-70 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 border border-gray-600 transition-all duration-200 placeholder-gray-400"
                 />
               </div>
@@ -121,7 +121,7 @@ function Login({ onLogin }) {
                   to="/register"
                   className="text-green-400 hover:text-green-300 font-medium transition-colors duration-200"
                 >
-                  Register here
+                  Sign-Up here.
                 </Link>
               </p>
             </div>
@@ -130,7 +130,7 @@ function Login({ onLogin }) {
         
         {/* Spotify-like footer */}
         <div className="mt-8 text-center">
-          <p className="text-gray-500 text-sm">© 2025 CWSMS. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">© 2025 Aba-Art-App. All rights reserved.</p>
         </div>
       </div>
     </div>

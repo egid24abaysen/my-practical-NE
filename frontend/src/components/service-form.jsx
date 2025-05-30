@@ -171,7 +171,7 @@ const ServiceForm = () => {
                   <option value="">Select Package</option>
                   {packages.map((pkg) => (
                     <option key={pkg.PackageNumber} value={pkg.PackageNumber}>
-                      {pkg.PackageName} ({pkg.PackagePrice}RWF)
+                      {pkg.PackageName} ({pkg.PackagePrice}$)
                     </option>
                   ))}
                 </select>
@@ -182,7 +182,7 @@ const ServiceForm = () => {
               className="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-75"
               disabled={loading}
             >
-              {loading ? (editMode ? 'Updating Service...' : 'Adding Service...') : (editMode ? 'Update Service' : 'Add Service')}
+              {loading ? (editMode ? 'Updating Service...' : 'Adding Service...') : (editMode ? 'Update Service' : 'Service Chamber')}
             </button>
             {editMode && (
               <button
@@ -246,7 +246,7 @@ const ServiceForm = () => {
                         {service.PackageName}
                       </td>
                       <td className="px-5 py-5 border-b border-gray-600 bg-gray-700 text-sm text-gray-200">
-                        {service.PackagePrice || 'N/A'}RWF
+                        {service.PackagePrice || 'N/A'}$
                       </td>
                       <td className="px-5 py-5 border-b border-gray-600 bg-gray-700 text-sm text-gray-200 text-center space-x-2">
                         <button

@@ -75,7 +75,7 @@ const CarForm = () => {
         {/* Car Form Section */}
         <div className="bg-gray-700 p-6 rounded-lg shadow-md">
           <h2 className="text-3xl font-bold text-sky-400 mb-6 text-center">
-            {editingCarPlate ? 'Edit Car Details' : 'Add New Car'}
+            {editingCarPlate ? 'Change Car Details' : 'Car Chamber'}
           </h2>
 
           {error && (

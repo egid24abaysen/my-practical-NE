@@ -77,7 +77,7 @@ const PackageForm = () => {
         {/* Form Section */}
         <div className="bg-gray-700 p-6 rounded-lg shadow-md">
           <h2 className="text-3xl font-bold text-teal-400 mb-6 text-center">
-            {editingPackageNumber ? 'Edit Package Details' : 'Add New Package'}
+            {editingPackageNumber ? 'Change Package Details' : 'Package Change'}
           </h2>
 
           {error && (
@@ -109,7 +109,7 @@ const PackageForm = () => {
               </div>
               <div>
                 <label htmlFor="PackagePrice" className="block text-sm font-medium text-gray-300 mb-1">
-                  Package Price (RWF)
+                  Package Price ($)
                 </label>
                 <input
                   type="number"
@@ -142,7 +142,7 @@ const PackageForm = () => {
               className="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-75"
               disabled={loading}
             >
-              {loading ? 'Saving...' : editingPackageNumber ? 'Update Package' : 'Add Package'}
+              {loading ? 'Saving...' : editingPackageNumber ? 'Edit Package' : 'Add Package'}
             </button>
             {editingPackageNumber && (
               <button
@@ -196,7 +196,7 @@ const PackageForm = () => {
                         {pkg.PackageDescription}
                       </td>
                       <td className="px-5 py-5 border-b border-gray-600 bg-gray-700 text-sm text-gray-200">
-                        {pkg.PackagePrice}RWF
+                        {pkg.PackagePrice} $
                       </td>
                       
                     </tr>

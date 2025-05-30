@@ -23,9 +23,9 @@ const ServiceForm = () => {
         setLoading(true);
         setError(null);
         const [carRes, packageRes, serviceRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/cars'),
-          axios.get('http://localhost:5000/api/packages'),
-          axios.get('http://localhost:5000/api/services'),
+          axios.get('https://octopus-wash-api.onrender.com/api/cars'),
+          axios.get('https://octopus-wash-api.onrender.com/api/packages'),
+          axios.get('https://octopus-wash-api.onrender.com/api/services'),
         ]);
         setCars(carRes.data);
         setPackages(packageRes.data);
@@ -53,11 +53,11 @@ const ServiceForm = () => {
       setSuccess(null);
       if (editMode) {
         // Update existing service
-        await axios.put(`http://localhost:5000/api/services/${editServiceId}`, formData);
+        await axios.put(`https://octopus-wash-api.onrender.com/api/services/${editServiceId}`, formData);
         setSuccess('Service updated successfully!');
       } else {
         // Add new service
-        await axios.post('http://localhost:5000/api/services', formData);
+        await axios.post('https://octopus-wash-api.onrender.com/api/services', formData);
         setSuccess('Service recorded successfully!');
       }
       setFormData({ PlateNumber: '', PackageNumber: '' });
@@ -65,7 +65,7 @@ const ServiceForm = () => {
       setEditServiceId(null);
 
       // Refresh service list after submission
-      const res = await axios.get('http://localhost:5000/api/services');
+      const res = await axios.get('https://octopus-wash-api.onrender.com/api/services');
       setServices(res.data);
     } catch (err) {
       setError(err.response?.data?.error || (editMode ? 'Failed to update service.' : 'Failed to add service.'));
@@ -94,10 +94,10 @@ const ServiceForm = () => {
       setLoading(true);
       setError(null);
       setSuccess(null);
-      await axios.delete(`http://localhost:5000/api/services/${serviceId}`);
+      await axios.delete(`https://octopus-wash-api.onrender.com/api/services/${serviceId}`);
       setSuccess('Service deleted successfully!');
       // Refresh service list after deletion
-      const res = await axios.get('http://localhost:5000/api/services');
+      const res = await axios.get('https://octopus-wash-api.onrender.com/api/services');
       setServices(res.data);
     } catch (err) {
       setError(err.response?.data?.error || 'Failed to delete service.');

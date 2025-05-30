@@ -22,7 +22,7 @@ const CarForm = () => {
   const fetchCars = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:5000/api/cars');
+      const response = await axios.get('https://octopus-wash-api.onrender.com/api/cars');
       setCars(response.data);
       setError(null);
     } catch (err) {
@@ -43,7 +43,7 @@ const CarForm = () => {
       setLoading(true);
       if (editingCarPlate) {
         // Update existing car
-        await axios.put(`http://localhost:5000/api/cars/${editingCarPlate}`, formData);
+        await axios.put(`https://octopus-wash-api.onrender.com/api/cars/${editingCarPlate}`, formData);
         setSuccess('Car updated successfully!');
       } else {
         // Create new car

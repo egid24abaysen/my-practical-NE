@@ -42,7 +42,7 @@ function Register() {
         <div className="bg-gray-800/50 backdrop-blur-lg rounded-2xl overflow-hidden shadow-2xl border border-gray-700/30">
           {/* Header with Spotify-like gradient */}
           <div className="bg-gradient-to-r from-green-500 to-green-600 p-6 text-center">
-            <h2 className="text-3xl font-bold text-white">Join Us!</h2>
+            <h2 className="text-3xl font-bold text-white">Getting Started!...</h2>
             <p className="text-green-100/90 mt-1 text-sm">Create your account</p>
           </div>
 
@@ -220,7 +220,7 @@ function Register() {
 
         <div className="mt-8 text-center">
           <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} CWSMS. All rights reserved.
+            © {new Date().getFullYear()} Aba-Art-App. All rights reserved.
           </p>
         </div>
       </div>

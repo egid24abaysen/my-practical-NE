@@ -47,7 +47,7 @@ const CarForm = () => {
         setSuccess('Car updated successfully!');
       } else {
         // Create new car
-        await axios.post('http://localhost:5000/api/cars', formData);
+        await axios.post('https://octopus-wash-api.onrender.com/api/cars', formData);
         setSuccess('Car added successfully!');
       }
       setFormData({

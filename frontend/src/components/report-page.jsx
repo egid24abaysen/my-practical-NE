@@ -53,7 +53,7 @@ const Reports = () => {
           <div className="bg-sky-700 p-6 rounded-xl shadow-lg border border-sky-600 transform hover:scale-105 transition duration-300 ease-in-out">
             <h3 className="text-xl font-semibold text-white mb-2">Total Revenue Generated</h3>
             <p className="text-5xl font-bold text-sky-100">
-              {(reportData?.services?.totalRevenue ?? 0)}RWF
+              {(reportData?.services?.totalRevenue ?? 0)}$
             </p>
           </div>
 
@@ -101,13 +101,13 @@ const Reports = () => {
         </div>
 
         {/* Refresh Button */}
-        <div className="text-center">
+        <div className="text-center space-x-4">
           <button
             onClick={()=> window.print()}
             className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold ml-1 py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-opacity-75"
         
           >
-            Generate report
+            Generate file
           </button>
           <button
             onClick={fetchReportData}

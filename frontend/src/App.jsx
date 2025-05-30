@@ -72,9 +72,10 @@ function App() {
 `;
 
   return (
-    <style>{scrollbarStyles}</style>
+    
     <Router>
       <div className="h-screen flex flex-col bg-gradient-to-br from-gray-900 to-black text-gray-100 overflow-hidden">
+        <style>{scrollbarStyles}</style>
         {/* Glassmorphism Header - Fixed Height */}
         <header className="h-16 bg-black bg-opacity-30 backdrop-blur-lg border-b border-gray-800 flex-shrink-0 flex justify-between items-center px-4 sticky top-0 z-50">
           <div className="flex items-center space-x-3">
@@ -166,7 +167,7 @@ function App() {
           )}
 
           {/* Scrollable Content Area */}
-          <main className="flex-1 overflow-auto">
+          <main className="flex-1 overflow-auto scrollbar-dark">
             <Routes>
               <Route path="/login" element={<Login onLogin={handleLogin} />} />
               <Route path="/register" element={<Register />} />

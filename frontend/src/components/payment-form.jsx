@@ -122,7 +122,7 @@ const PaymentForm = () => {
               </div>
               <div>
                 <label htmlFor="AmountPaid" className="block text-sm font-medium text-gray-300 mb-1">
-                  Amount Paid* (RWF)
+                  Amount Paid* ($)
                 </label>
                 <input
                   type="number"

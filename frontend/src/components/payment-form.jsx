@@ -84,7 +84,7 @@ const PaymentForm = () => {
         {/* Payment Form Section */}
         <div className="bg-gray-700 p-6 rounded-lg shadow-md">
           <h2 className="text-3xl font-bold text-indigo-400 mb-6 text-center">
-            {editingPaymentId ? 'Edit Payment' : 'Record New Payment'}
+            {editingPaymentId ? 'Change Payment' : 'Payment Chamber'}
           </h2>
 
           {error && (
@@ -204,10 +204,10 @@ const PaymentForm = () => {
                         {payment.PackageName}
                       </td>
                       <td className="px-5 py-5 border-b border-gray-600 bg-gray-700 text-sm text-gray-200">
-                        {payment.PackagePrice || 'N/A'}RWF
+                        {payment.PackagePrice || 'N/A'} $
                       </td>
                       <td className="px-5 py-5 border-b border-gray-600 bg-gray-700 text-sm text-gray-200">
-                        {payment.AmountPaid}RWF
+                        {payment.AmountPaid} $
                       </td>
                      
                     </tr>

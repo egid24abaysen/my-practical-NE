@@ -10,7 +10,7 @@ const Reports = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await axios.get('http://localhost:5000/api/reports');
+      const response = await axios.get('https://octopus-wash-api.onrender.com/api/reports');
       setReportData(response.data);
     } catch (err) {
       console.error('Error fetching report data:', err);

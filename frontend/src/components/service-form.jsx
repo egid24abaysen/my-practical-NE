@@ -120,7 +120,7 @@ const ServiceForm = () => {
       <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-xl space-y-8">
         {/* Record New Service Section */}
         <div className="bg-gray-700 p-6 rounded-lg shadow-md">
-          <h2 className="text-3xl font-bold text-amber-400 mb-6 text-center">{editMode ? 'Edit Service' : 'Record New Service'}</h2>
+          <h2 className="text-3xl font-bold text-amber-400 mb-6 text-center">{editMode ? 'Edit Service' : 'Service Chamber'}</h2>
 
           {error && (
             <div className="bg-red-600 text-white p-3 rounded-md mb-4 text-center">

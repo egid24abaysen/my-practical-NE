@@ -22,7 +22,7 @@ const PackageForm = () => {
   const fetchPackages = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('http://localhost:5000/api/packages');
+      const res = await axios.get('https://octopus-wash-api.onrender.com/api/packages');
       setPackages(res.data);
       setError(null);
     } catch (err) {
@@ -42,13 +42,13 @@ const PackageForm = () => {
     try {
       setLoading(true);
       if (editingPackageNumber) {
-        await axios.put(`http://localhost:5000/api/packages/${editingPackageNumber}`, {
+        await axios.put(`https://octopus-wash-api.onrender.com/api/packages/${editingPackageNumber}`, {
           ...formData,
           PackagePrice: parseFloat(formData.PackagePrice)
         });
         setSuccess('Package updated successfully!');
       } else {
-        await axios.post('http://localhost:5000/api/packages', {
+        await axios.post('https://octopus-wash-api.onrender.com/api/packages', {
           ...formData,
           PackagePrice: parseFloat(formData.PackagePrice)
         });

@@ -42,8 +42,37 @@ function App() {
       </div>
     );
   }
+  const scrollbarStyles = `
+  /* For Webkit browsers (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(17, 24, 39, 0.5); /* bg-gray-900 with opacity */
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(74, 222, 128, 0.5); /* bg-green-500 with opacity */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(74, 222, 128, 0.8); /* More opaque on hover */
+  }
+
+  /* For Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(74, 222, 128, 0.5) rgba(17, 24, 39, 0.5);
+  }
+`;
 
   return (
+    <style>{scrollbarStyles}</style>
     <Router>
       <div className="h-screen flex flex-col bg-gradient-to-br from-gray-900 to-black text-gray-100 overflow-hidden">
         {/* Glassmorphism Header - Fixed Height */}
@@ -55,7 +84,7 @@ function App() {
               </svg>
             </div>
             <h1 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
-              SmartPark Wash
+              Octopus-Washy
             </h1>
           </div>
           {isLoggedIn && (

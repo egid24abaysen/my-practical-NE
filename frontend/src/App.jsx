@@ -9,9 +9,11 @@ import Reports from './components/report-page';
 import Login from './components/login-page';
 import Register from './components/signup-page';
 import ProtectedRoute from './components/protected-route';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const user = localStorage.getItem('user');
@@ -19,6 +21,9 @@ function App() {
       setIsLoggedIn(true);
     } else {
       setIsLoggedIn(false);
+    }
+    if (isLoggedIn === null) {
+      navigate('/register');
     }
   }, []);
 

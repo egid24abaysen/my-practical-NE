@@ -176,7 +176,7 @@ function App() {
                 element={
                   <ProtectedRoute isLoggedIn={isLoggedIn}>
                     <Routes>
-                      <Route path="/" element={<Navigate to="/login" />} />
+                      <Route path="/" element={<Navigate to="/reports" />} />
                       <Route path="/cars" element={<CarForm />} />
                       <Route path="/packages" element={<PackageForm />} />
                       <Route path="/services" element={<ServiceForm />} />

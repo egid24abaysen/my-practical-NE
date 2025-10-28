@@ -21,7 +21,7 @@ app.use(session({
 
 const pool = new Pool({
   host: 'dpg-d40ie7m3jp1c73egpf90-a',
-  user: 'root',
+  user: 'octobase_eans_user',
   password: 'nrtkuUt8NFdAEXeElq9XiNsAs7uWMwKA',
   database: 'octobase_eans',
   port: 5432,

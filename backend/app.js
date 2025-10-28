@@ -20,10 +20,10 @@ app.use(session({
 }));
 
 const pool = new Pool({
-  host: 'dpg-d2cft9p5pdvs73dl2ik0-a',
+  host: 'dpg-d40ie7m3jp1c73egpf90-a',
   user: 'root',
-  password: 'wYCcW7qp4izsogC6FayJkz5QdF1ngIlF',
-  database: 'octobase_3093',
+  password: 'nrtkuUt8NFdAEXeElq9XiNsAs7uWMwKA',
+  database: 'octobase_eans',
   port: 5432,
   ssl: { rejectUnauthorized: false }
 });
